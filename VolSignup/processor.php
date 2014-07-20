@@ -10,7 +10,7 @@ $query = "INSERT into `".$db_table."` (fName,lName,dob,maleFemale,stAdd,city,sta
 mysql_query($query);
 mysql_close($link);
 
-mail("tom@itbytomwilson.com","phpFormGenerator - Form submission","Form data:
+mail("tom@itbytomwilson.com","New Volunteer Form","Form data:
 
 First Name: " . $_POST['fName'] . "
 Last Name: " . $_POST['lName'] . "
