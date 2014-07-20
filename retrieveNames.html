@@ -1,0 +1,22 @@
+ <?php
+ // Connects to your Database
+ mysql_connect("mysql.itbytomwilson.com", "itbytomwilsondb", "Tntw2010") or die(mysql_error());
+ mysql_select_db("venue_itbytomwilson_com") or die(mysql_error());
+
+
+ // Collects data from "volSignUp" table
+  $data = mysql_query("SELECT * FROM volSignUp")
+ or die(mysql_error());
+
+ // puts the "volSignUp" info into the $info array
+ $info = mysql_fetch_array( $data );
+
+ Print "<table border cellpadding=3>";
+ while($info = mysql_fetch_array( $data ))
+ {
+ Print "<tr>";
+ Print "<th>First Name:</th> <td>".$info['fName'] . "</td> ";
+ Print "<th>Last Name:</th> <td>".$info['lName'] . " </td></tr>";
+ }
+ Print "</table>";
+ ?>
