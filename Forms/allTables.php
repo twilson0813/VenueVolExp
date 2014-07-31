@@ -6,38 +6,38 @@
 </head>
 
 <body>
-
-  <table border="1">
-  <tr><td>Ministry</td><td>First Name</td><td>Last Name</td><td></td></tr>
-  
-  <?php
-    /*$mysqlserver="xdap373.bcbst.com";
-    $mysqlusername="itbytomwilsondb";
-    $mysqlpassword="Tntw2010";
-	
-    $link=mysql_connect($mysqlserver, $mysqlusername, $mysqlpassword) or die ("Error connecting to mysql server: ".mysql_error());
-    
-    $dbname = 'venue_itbytomwilson_com';
-    mysql_select_db($dbname, $link) or die ("Error selecting specified database on mysql server: ".mysql_error());*/
-	
-	include "./dbInfo_inc.php";
-	
-	$volquery="SELECT id, fName, lName, ministry FROM volSignup";
-    $volresult=mysql_query($volquery) or die ("Query to get data from volSignup failed: ".mysql_error());
-    
-    
-    
-    while ($volrow=mysql_fetch_array($volresult)) {
-    $volid=$volrow["id"];
-    $fName=$volrow["fName"];
-    $lName=$volrow["lName"];
-    $ministry=$volrow["ministry"];
-      echo "<tr><td>$ministry</td><td>$fName</td><td>$lName</td><td><a href='http://localhost:88/VenueForms/VolSelect/volDetails.php?id=$volid'>Select</a></td></tr>";
-    }
-    
-  
-     
-    ?>
-  </table>
+    <form method="post">
+        <table border="1">
+        <tr><td>Ministry</td><td>First Name</td><td>Last Name</td><td colspan="3"></td></tr>
+        
+			<?php
+				include "./dbInfo_inc.php";
+				
+				$volquery="SELECT id, fName, lName, ministry FROM volSignUp";
+				$volresult=mysql_query($volquery) or die ("Query to get data from volSignup failed: ".mysql_error());
+				
+				
+				
+				while ($volrow=mysql_fetch_array($volresult)) 
+				{
+					$volid=$volrow["id"];
+					$fName=$volrow["fName"];
+					$lName=$volrow["lName"];
+					$ministry=$volrow["ministry"];
+					echo "<tr>";
+					echo "<td>$ministry</td>";
+					echo "<td>$fName</td>";
+					echo "<td>$lName</td>";
+					echo "<td><input name=\"viewVol\" type=\"button\" value=\"View\" onclick=\"window.open('volDetails.php?id=$volid')\"/></td>";
+					echo "<td><input name=\"viewVol\" type=\"submit\" value=\"Process\" formaction=\"processor.php\"/></td>";
+					echo "<td><input name=\"viewVol\" type=\"submit\" value=\"Delete\" formaction=\"form.php\"/></td>";
+					echo "</tr>";
+				}
+            	echo '<input name="testButton" type="submit" value="test" formaction="processor.php"/>';
+            
+             
+            ?>
+        </table>
+    </form>
 </body>
 </html>

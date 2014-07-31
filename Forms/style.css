@@ -1,10 +1,15 @@
-
-
 body 
 {
 	text-align: center;
 	margin: 20px;		/* shift whole page down by 25 pixels */
 	background-color: #FFFFFF;
+}
+
+table.center
+{
+	width: 100%;
+	margin-left:0;
+	margin-right:0;
 }
 
 

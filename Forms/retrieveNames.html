@@ -1,8 +1,6 @@
  <?php
  // Connects to your Database
- mysql_connect("mysql.itbytomwilson.com", "itbytomwilsondb", "Tntw2010") or die(mysql_error());
- mysql_select_db("venue_itbytomwilson_com") or die(mysql_error());
-
+ include "./dbinfo_inc.php"
 
  // Collects data from "volSignUp" table
   $data = mysql_query("SELECT * FROM volSignUp")

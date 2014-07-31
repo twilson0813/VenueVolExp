@@ -206,7 +206,7 @@
                     <input class=mainForm type=text name=fName id=fName size='20' value=
 					<?php 
 					  
-					  echo "'"; echo $fName; echo "'";
+					  echo "'",$fName,"'";
 					   
 					?>
                     ></li>
@@ -258,7 +258,20 @@
 					<label class="formFieldQuestion">Have you become a Bringer?&nbsp;*</label><span><input class=mainForm type=radio name=bringer id=bringer_option_1 value="Yes" /><label class=formFieldOption for="bringer_option_1">Yes</label><input class=mainForm type=radio name=bringer id=bringer_option_2 value="No" /><label class=formFieldOption for="bringer_option_2">No</label></span></li>
 
 				<li class="mainForm" id="ministry">
-					<label class="formFieldQuestion">What area would you like to serve in?&nbsp;*</label><select class=mainForm name=ministry id=ministry><option value=''></option><option value="Parking">Parking</option><option value="Greeters">Greeters</option><option value="Hosts">Hosts</option><option value="Ushers">Ushers</option><option value="Alter Ministry">Alter Ministry</option><option value="Production">Production</option><option value="Worship">Worship</option><option value="Venue Kids">Venue Kids</option><option value="Check-In">Check-In</option><option value="Venue Kids Production">Venue Kids Production</option><option value="Venue Kids Worship">Venue Kids Worship</option><option value="Security">Security</option><option value="Connections">Connections</option></select></li>
+					<label class="formFieldQuestion">What area would you like to serve in?&nbsp;*</label>
+                    <select class=mainForm name=ministry id=ministry>
+                    <option value=''>
+                    <?php
+						include "./get_ministries.inc"; 
+						while ($minRow=mysql_fetch_array($minResult))
+						{
+							$minID=$minRow["id"];
+							$minName=$minRow["ministryName"];
+							echo "<option value=\"", $minID, "\">", $minName, "</option>";	
+						}
+					?>
+                    </select>
+                </li>
 
 
 		<!-- end of this page -->
