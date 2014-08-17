@@ -187,13 +187,14 @@
 	  $volid = $_GET['id'];
 	  include "./dbInfo_inc.php";
   
-	  $volquery="SELECT * FROM volSignUp where id=$volid";
+	  $volquery="SELECT * FROM vve_volSignUp where id=$volid";
 	  $volresult=mysql_query($volquery) or die ("Query to get data from volSignUp failed: ".mysql_error());
 	  
 	  $volrow=mysql_fetch_array($volresult);
 	  
 	  $lName=$volrow["lName"];
 	?> 
+    <input type="hidden" name="volID" value="<?php echo $volid;?>" />
 	<div id="mainForm">
 
 

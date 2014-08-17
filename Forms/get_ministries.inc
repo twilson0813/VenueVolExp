@@ -2,8 +2,8 @@
   
   include "./dbInfo_inc.php";
   
-  $minQuery="SELECT * FROM venueMinistries";
-  $minResult=mysql_query($minQuery) or die ("Query to get data from venueMinistries failed: ".mysql_error());
+  $minQuery="SELECT * FROM vve_venueMinistries";
+  $minResult=mysql_query($minQuery) or die ("Query to get data from vve_venueMinistries failed: ".mysql_error());
   
   
   ?>

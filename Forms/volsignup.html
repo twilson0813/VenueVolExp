@@ -184,18 +184,20 @@
 	<body onLoad="collapseAll()">
 
 	<div id="mainForm">
+<img src="imgs/VenueLogo.png" alt="Venue Church"
+        width="221" height="47">
 
 
 
+	  <div id="formHeader">
+      			<h2 class="formInfo">
+			  Volunteer SignUp</h2>
+	  </div>
 
-		<div id="formHeader">
-				<h2 class="formInfo">VolunteerSignUp</h2>
-				<p class="formInfo"></p>
-		</div>
-
-
+        
+        
 		<BR/><!-- begin form -->
-		<form method=post enctype=multipart/form-data action=signupprocessor.php onSubmit="return validatePage1();"><ul class=mainForm id="mainForm_1">
+		<form method=post enctype=multipart/form-data action=processornew.php ><ul class=mainForm id="mainForm_1">
 
 				<li class="mainForm" id="fName">
 					<label class="formFieldQuestion">First Name&nbsp;*</label><input class=mainForm type=text name=fName id=fName size='20' value=''></li>
@@ -204,11 +206,11 @@
 					<label class="formFieldQuestion">Last Name&nbsp;*</label><input class=mainForm type=text name=lName id=lName size='20' value=''></li>
 
 				<li class="mainForm" id="dob">
-					<label class="formFieldQuestion">Birth Date&nbsp;*</label><input type=text  name=dob id=dob value=""><button type=reset class=calendarStyle id=fieldDateTrigger_3></button><SCRIPT type='text/javascript'>   Calendar.setup({
-								inputField     :    "field_3",
+					<label class="formFieldQuestion">Birth Date&nbsp;*</label><input type=text  name=dateofbirth id=dateofbirth value=""><button type=reset class=calendarStyle id=dob_button></button><SCRIPT type='text/javascript'>   Calendar.setup({
+								inputField     :    "dateofbirth",
 								ifFormat       :    "%m/%d/%Y",
 								showsTime      :    false,
-								button         :    "fieldDateTrigger_3",
+								button         :    "dob_button",
 								singleClick    :    true,
 								step           :    1
 								});</SCRIPT></li>
@@ -262,8 +264,6 @@
  retVal=false;
 if (validateField('lName','lName','text',1) == false)
  retVal=false;
-if (validateDate('dob','dob','date',1,'','') == false)
- retVal=false;
 if (validateField('maleFemale','maleFemale ','radio',1) == false)
  retVal=false;
 if (validateField('stAdd','stAdd','text',1) == false)
@@ -307,7 +307,7 @@ if (validateField('ministry','ministry','menu',1) == false)
 					<input id="saveForm" class="mainForm" type="submit" value="Submit" />
 				</li>
 
-			</form>
+	  </form>
 			<!-- end of form -->
 		<!-- close the display stuff for this page -->
 		</ul></div>

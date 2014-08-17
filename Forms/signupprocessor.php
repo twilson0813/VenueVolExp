@@ -1,33 +1,54 @@
 <?php
 
 $where_form_is="http://".$_SERVER['SERVER_NAME'].strrev(strstr(strrev($_SERVER['PHP_SELF']),"/"));
+$volID=$_GET['id'];
 
-include("config.inc.php");
-$link = mysql_connect($db_host,$db_user,$db_pass);
-if(!$link) die ('Could not connect to database: '.mysql_error());
-mysql_select_db($db_name,$link);
-$query = "INSERT into `".$db_table."` (fName,lName,dob,maleFemale,stAdd,city,state,zip,homePhone,cellPhone,textMessage,email,maritalStat,bringer,ministry) VALUES ('" . $_POST['fName'] . "','" . $_POST['lName'] . "','" . $_POST['dob'] . "','" . $_POST['maleFemale'] . "','" . $_POST['stAdd'] . "','" . $_POST['city'] . "','" . $_POST['state'] . "','" . $_POST['zip'] . "','" . $_POST['homePhone'] . "','" . $_POST['cellPhone'] . "','" . $_POST['textMessage'] . "','" . $_POST['email'] . "','" . $_POST['maritalStat'] . "','" . $_POST['bringer'] . "','" . $_POST['ministry'] . "')";
+include("dbInfo_inc.php");
+$db_table='vve_followUpTracker';
+$query = "INSERT into `".$db_table."` (coordID,volID,followUpRequested) VALUES ('" . $volID . "','1','8/1/2014 14:45:00')";
 mysql_query($query);
 mysql_close($link);
 
+include("dbInfo_inc.php");
+$db_table='vve_volSignUp';
+$query = "UPDATE ".$db_table." SET processed = '1' WHERE id = " . $volID;
+mysql_query($query);
+mysql_close($link);
+
+include("dbInfo_inc.php");
+$volquery="SELECT * FROM vve_volSignUp where id=". $volID;
+$volresult=mysql_query($volquery) or die ("Query to get data from vve_volSignUp failed: ".mysql_error());
+$volrow=mysql_fetch_array($volresult);
+
+
 mail("tom@itbytomwilson.com","New Volunteer Form","Form data:
 
-First Name: " . $_POST['fName'] . "
-Last Name: " . $_POST['lName'] . "
-Birth Date: " . $_POST['dob'] . "
-Male or Female: " . $_POST['maleFemale'] . "
-Street Address: " . $_POST['stAdd'] . "
-City: " . $_POST['city'] . "
-State: " . $_POST['state'] . "
-Zip Code: " . $_POST['zip'] . "
-Home Phone Number: " . $_POST['homePhone'] . "
-Cell Phone Number: " . $_POST['cellPhone'] . "
-Would you like to receive updates by text message?: " . $_POST['textMessage'] . "
-Email Address: " . $_POST['email'] . "
-Marital Status: " . $_POST['maritalStat'] . "
-Have you become a bringer?: " . $_POST['bringer'] . "
-What area would you like to serve in?: " . $_POST['ministry'] . "
+You have a Volunteer interested in your ministry. Please follow up with them in the next 24 hours. 
+
+
+First Name: " . $volrow['fName'] . "
+Last Name: " . $volrow['lName'] . "
+Birth Date: " . $volrow['dob'] . "
+Male or Female: " . $volrow['maleFemale'] . "
+Street Address: " . $volrow['stAdd'] . "
+City: " . $volrow['city'] . "
+State: " . $volrow['state'] . "
+Zip Code: " . $volrow['zip'] . "
+Home Phone Number: " . $volrow['homePhone'] . "
+Cell Phone Number: " . $volrow['cellPhone'] . "
+Would you like to receive updates by text message?: " . $volrow['textMessage'] . "
+Email Address: " . $volrow['email'] . "
+Marital Status: " . $volrow['maritalStat'] . "
+Have you become a bringer?: " . $volrow['bringer'] . "
+What area would you like to serve in?: " . $volrow['ministry'] . "
+
+Thank You
+
+Claire Parker
 ");
+
+mysql_query($query);
+mysql_close($link);
 
 include("confirm.html");
 

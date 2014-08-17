@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" ?><dwsync><file name="style.css" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489621591" remote="12079545332" Dst="-1" /><file name="select_vol.inc" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3488717371" remote="2636415993956650472" Dst="-1" /><file name="form.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489620169" remote="622762294245275280" Dst="-1" /><file name="allTables.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489618301" remote="12079542092" Dst="-1" /><file name="dbInfo_inc.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3488718217" remote="2949437883414424820" Dst="-1" /><file name="get_ministries.inc" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489619152" remote="12079542932" Dst="-1" /><file name="newVol.inc" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489622182" remote="12079545932" Dst="-1" /><file name="newVol.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489620861" remote="622762294245275940" Dst="-1" /><file name="volDetails.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489623321" remote="622762294245278400" Dst="-1" /></dwsync>
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="style.css" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489621591" remote="12079545332" Dst="-1" />
+<file name="select_vol.inc" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3488717371" remote="2636415993956650472" Dst="-1" />
+<file name="form.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489620169" remote="622762294245275280" Dst="-1" />
+<file name="allTables.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489618301" remote="12079542092" Dst="-1" />
+<file name="dbInfo_inc.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3488718217" remote="2949437883414424820" Dst="-1" />
+<file name="get_ministries.inc" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489619152" remote="12079542932" Dst="-1" />
+<file name="newVol.inc" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489622182" remote="12079545932" Dst="-1" />
+<file name="newVol.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489620861" remote="622762294245275940" Dst="-1" />
+<file name="volDetails.php" server="ftp.venue.itbytomwilson.com//venue.itbytomwilson.com/VenueVolExp/" local="3489623321" remote="622762294245278400" Dst="-1" />
+<file name="allTables.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="CaptchaSecurityImages.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="config.inc.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="confirm.html" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="dbInfo_inc.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="form.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="get_ministries.inc" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="monofont.ttf" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="newVol.inc" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130513129796489976" remote="130513129790000000" Dst="2" />
+<file name="newVol.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="retrieveNames.html" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="select_vol.inc" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="signupprocessor.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130513130664313185" remote="130513130660000000" Dst="2" />
+<file name="style.css" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="volDetails.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="volSelect.php" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+<file name="volsignup.html" server="C:/Tools/XAMPP/htdocs/VenueVolExp/" local="130512522850000000" remote="130512522850000000" Dst="2" />
+</dwsync>
